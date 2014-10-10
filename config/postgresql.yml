@@ -1,0 +1,19 @@
+Default: &defaults
+  user: yesod23
+  password: yesod23
+  host: localhost
+  port: 5432
+  database: yesod23
+  poolsize: 10
+
+Development:
+  <<: *defaults
+
+Testing:
+  database: yesod23_test
+  <<: *defaults
+
+Staging:
+  database: yesod23_staging
+  poolsize: 100
+  <<: *defaults
