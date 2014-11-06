@@ -1,0 +1,10 @@
+{
+  "name": "Heroku Yesod",
+  "website": "https://github.com/rpaladugu1/herokuyesod",
+  "env": {
+    "BUILDPACK_URL": "https://github.com/mietek/haskell-on-heroku.git"
+  },
+  "addons": [
+    "heroku-postgresql:hobby-dev"
+  ]
+}
