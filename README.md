@@ -7,15 +7,15 @@ This repository contains necessary changes to deploy a basic Yesod app to Heroku
 ### Prerequisites: >= cabal 1.20 
 
 ### Following changes have been made to code to make it work on Heroku:
-* .halcyon-magic folder has been created as per [GitHub]/mietek/haskell-on-heroku
+* .halcyon-magic folder has been created as per [GitHub](mietek/haskell-on-heroku)
    * This folder contains alex and happy dependencies for Yesod install 
-* Helpers folder contains Heroku code as per [GitHub]/yesodweb/yesod
+* Helpers folder contains Heroku code as per [GitHub](yesodweb/yesod)
   * Made changes to project *cabal file* to include Heroku dependecy
   * Made changes to *Application.hs* as per directions by importing *heroku.hs* from Helpers folder and making changes to     makeFoundation function
-* Brought *Procfile* to root folder and changed as per [GitHub]/mietek/haskell-on-heroku
+* Brought *Procfile* to root folder and changed as per [GitHub](mietek/haskell-on-heroku)
 * In *config/postgresql.yml* removed production section
-* Added *app.json* file as per [GitHub]/mietek/haskell-on-heroku
-* Added *cabal.config* file as per [GitHub]/mietek/haskell-on-heroku
+* Added *app.json* file as per [GitHub](mietek/haskell-on-heroku)
+* Added *cabal.config* file as per [GitHub](mietek/haskell-on-heroku)
   * This file is created with *cabal freeze* command hence *cabal 1.20* dependency
 
 ### Deployment steps to Heroku. 
