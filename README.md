@@ -1,21 +1,20 @@
 Heroku Yesod
 ============
 
-This repository contains necessary changes to deploy a basic Yesod app to Heroku. 
-
+This repository contains necessary code changes to deploy a basic Yesod app to Heroku. 
 
 ### Prerequisites: >= cabal 1.20 
 
 ### Following changes have been made to code to make it work on Heroku:
-* .halcyon-magic folder has been created as per (/mietek/haskell-on-heroku)
+* .halcyon-magic folder has been created as per [haskell-on-heroku](http://github.com/mietek/haskell-on-heroku)
    * This folder contains alex and happy dependencies for Yesod install 
-* Helpers folder contains Heroku code as per (/yesodweb/yesod)
+* Helpers folder contains Heroku code as per [Pat Brisbin](http://pbrisbin.com/posts/parsing_database_url/) and directions from  [yesodweb/yesod](http://github.com/yesodweb/yesod)
   * Made changes to project *cabal file* to include Heroku dependecy
   * Made changes to *Application.hs* as per directions by importing *heroku.hs* from Helpers folder and making changes to     makeFoundation function
-* Brought *Procfile* to root folder and changed as per (/mietek/haskell-on-heroku)
+* Brought *Procfile* to root folder and changed as per [haskell-on-heroku](http://github.com/mietek/haskell-on-heroku)
 * In *config/postgresql.yml* removed production section
-* Added *app.json* file as per (/mietek/haskell-on-heroku)
-* Added *cabal.config* file as per (/mietek/haskell-on-heroku)
+* Added *app.json* file as per [haskell-on-heroku](http://github.com/mietek/haskell-on-heroku)
+* Added *cabal.config* file as per [haskell-on-heroku](http://github.com/mietek/haskell-on-heroku)
   * This file is created with *cabal freeze* command hence *cabal 1.20* dependency
 
 ### Deployment steps to Heroku. 
@@ -35,10 +34,13 @@ First do test deployment to your Heroku account and then come back and do these 
 *  git checkout <original branch> i.e. master
 *  git branch -D deploy
 
-###Test Deployment
-----------
+### Test Deployment
+
 If you have a Heroku account already, you can test the deployment first then worry about the above changes later. 
 To test the deployment, just click the link below and this example will be deployed in your Heroku account. 
 Deploys to [Heroku](http://heroku.com/) in two clicks, using [_Haskell on Heroku_](http://haskellonheroku.com/).
 
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/mietek/herokuyesod/tree/haskell-on-heroku/)
+
+### Acknowledgements
+I would like to acknowledge Mietek Bak for his help in deploying this app and others who contributed to this process in various forms.
