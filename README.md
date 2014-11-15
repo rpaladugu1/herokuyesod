@@ -8,7 +8,7 @@ This repository contains necessary code changes to deploy a basic Yesod app to H
 ### Following changes have been made to code to make it work on Heroku:
 * .halcyon-magic folder has been created as per [haskell-on-heroku](http://github.com/mietek/haskell-on-heroku)
    * This folder contains alex and happy dependencies for Yesod install 
-* Helpers folder contains Heroku code as per [Pat Brisbin](http://pbrisbin.com/posts/parsing_database_url/) and directions from  [yesodweb/yesod](http://github.com/yesodweb/yesod)
+* Helpers folder contains Heroku code as per [Pat Brisbin](http://pbrisbin.com/posts/parsing_database_url/) and directions from  [yesodweb/yesod](https://github.com/yesodweb/yesod/wiki/Deploying-Yesod-Apps-to-Heroku)
   * Made changes to project *cabal file* to include Heroku dependecy
   * Made changes to *Application.hs* as per directions by importing *heroku.hs* from Helpers folder and making changes to     makeFoundation function
 * Brought *Procfile* to root folder and changed as per [haskell-on-heroku](http://github.com/mietek/haskell-on-heroku)
@@ -42,5 +42,6 @@ Deploys to [Heroku](http://heroku.com/) in two clicks, using [_Haskell on Heroku
 
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/mietek/herokuyesod/tree/haskell-on-heroku/)
 
+
 ### Acknowledgements
-I would like to acknowledge Mietek Bak for his help in deploying this app and others who contributed to this process in various forms.
+I would like to acknowledge Miëtek Bak for his help in deploying this app and others who contributed to this process in various forms.
