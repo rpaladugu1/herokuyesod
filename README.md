@@ -20,19 +20,19 @@ This repository contains necessary code changes to deploy a basic Yesod app to H
 ### Deployment steps to Heroku. 
 First do test deployment to your Heroku account and then come back and do these steps manually to test the process. 
 
-*  yesod init 
-*  git init . && git add . && git commit -m 'Yesod basic app'
-*  heroku create -b https://github.com/mietek/haskell-on-heroku -s cedar-14
-*  heroku addons:add heroku-postgresql:dev --app name
+* yesod init 
+* git init . 
+* heroku create -b https://github.com/mietek/haskell-on-heroku -s cedar-14
+* heroku addons:add heroku-postgresql:dev --app name
   * take note of the color name in the url this outputs
-*  heroku pg:promote HEROKU_POSTGRESQL_colorname_URL --app name
+* heroku pg:promote HEROKU_POSTGRESQL_colorname_URL --app name
 * Make the above changes to your code 
-*  git checkout -b deploy
-  * Make any other changes to your code 
-*  git commit -m "changes"
-*  git push -f heroku deploy:master (i.e. first time )
-*  git checkout <original branch> i.e. master
-*  git branch -D deploy
+* git add . && git commit -m 'Yesod basic app'
+* git checkout -b deploy
+  * Make any other changes to your code and do git add . &&  git commit -m "changes"
+* git push -f heroku deploy:master (i.e. first time )
+* git checkout <original branch> i.e. master
+* git branch -D deploy
 
 ### Test Deployment
 
