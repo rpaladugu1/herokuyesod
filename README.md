@@ -19,24 +19,24 @@ This repository contains necessary changes to deploy a basic Yesod app to Heroku
   * This file is created with *cabal freeze* command hence *cabal 1.20* dependency
 
 ### Deployment steps to Heroku. You can test it first and then do these steps to your project. 
-* > yesod init 
-* > git init . && git add . && git commit -m 'Yesod basic app'
-* > heroku create -b https://github.com/mietek/haskell-on-heroku -s cedar-14
-* > heroku addons:add heroku-postgresql:dev --app name
-# take note of the color name in the url this outputs
-* > heroku pg:promote HEROKU_POSTGRESQL_colorname_URL --app name
+*  yesod init 
+*  git init . && git add . && git commit -m 'Yesod basic app'
+*  heroku create -b https://github.com/mietek/haskell-on-heroku -s cedar-14
+*  heroku addons:add heroku-postgresql:dev --app name
+  * take note of the color name in the url this outputs
+*  heroku pg:promote HEROKU_POSTGRESQL_colorname_URL --app name
 * Make the above changes to your code 
-* > git checkout -b deploy
+*  git checkout -b deploy
   * Make any other changes to your code 
-* > git commit -m "changes"
-* > git push -f heroku deploy:master
-* > git checkout <original branch> i.e. master
-* > git branch -D deploy
+*  git commit -m "changes"
+*  git push -f heroku deploy:master
+*  git checkout <original branch> i.e. master
+*  git branch -D deploy
 
 ###Test Deployment
 ----------
 If you have a Heroku account already, you can test the deployment first then worry about the above changes later. 
-To test the deployment, just click the link and this example will be deployed in your Heroku account. 
+To test the deployment, just click the link below and this example will be deployed in your Heroku account. 
 Deploys to [Heroku](http://heroku.com/) in two clicks, using [_Haskell on Heroku_](http://haskellonheroku.com/).
 
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/mietek/herokuyesod/tree/haskell-on-heroku/)
