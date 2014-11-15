@@ -15,7 +15,7 @@ This repository contains necessary code changes to deploy a basic Yesod app to H
 * In *config/postgresql.yml* removed production section
 * Added *app.json* file as per [haskell-on-heroku](http://github.com/mietek/haskell-on-heroku)
 * Added *cabal.config* file as per [haskell-on-heroku](http://github.com/mietek/haskell-on-heroku)
-  * This file is created with *cabal freeze* command hence *cabal 1.20* dependency
+  * This file was created with *cabal freeze* command hence *cabal 1.20* dependency
 
 ### Deployment steps to Heroku. 
 First do test deployment to your Heroku account and then come back and do these steps manually to test the process. 
@@ -44,4 +44,4 @@ Deploys to [Heroku](http://heroku.com/) in two clicks, using [_Haskell on Heroku
 
 
 ### Acknowledgements
-I would like to acknowledge Miëtek Bak for his help in deploying this app and others who contributed to this process in various forms.
+I would like to acknowledge Miëtek Bak for his help in deploying this app and for creating a simple process to deploy haskell apps to heroku and others who contributed to this process in various forms.
